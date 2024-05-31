@@ -7,9 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-
-import static connector.Hooks.driver;
+import org.testng.Assert;
 
 public class TC01_UserCanRegister{
     HomePage homeObject;
@@ -40,7 +38,7 @@ public class TC01_UserCanRegister{
     }
     @And("user confrim password")
     public void user_confrim_password() {
-        registerObject.userSetPassword();
+        registerObject.userSetConfirmationPassword();
     }
     @And("click on rigster button")
     public void click_on_rigster_button() {
@@ -48,6 +46,8 @@ public class TC01_UserCanRegister{
     }
     @Then("user should be registered successfully")
     public void user_should_be_registered_successfully() {
+        String message = registerObject.asserThatUserHasRegister();
+        System.out.println(message);
+        Assert.assertEquals(message,"Your registration completed");
     }
-
 }

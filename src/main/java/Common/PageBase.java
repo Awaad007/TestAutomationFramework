@@ -1,6 +1,5 @@
 package Common;
 
-import com.google.gson.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -29,6 +28,9 @@ public class PageBase {
 
         WebElement element = driver.findElement(button);
         element.click();
+    }
+    protected WebElement find(By locator){
+        return driver.findElement(locator);
     }
 
     public String jsonReader(String obj, String fileNme) {

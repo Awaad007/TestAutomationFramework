@@ -1,14 +1,8 @@
 package Pages;
 
 import Common.PageBase;
-import com.google.gson.JsonObject;
-import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-import javax.xml.xpath.XPath;
 
 public class RegisterPage extends PageBase {
     public RegisterPage(WebDriver driver) {
@@ -47,11 +41,14 @@ public class RegisterPage extends PageBase {
         setElementText(passwordTxt,jsonReader("password",registerData));
     }
 
-    public void userSetConfirmationPassword(String password){
+    public void userSetConfirmationPassword(){
         setElementText(confirmPasswordTxt,jsonReader("password",registerData));
     }
     public void userClickOnRegisterBtn(){
         clickOnButton(registerBtn);
 
+    }
+    public String asserThatUserHasRegister (){
+        return find(successMessage).getText();
     }
 }
