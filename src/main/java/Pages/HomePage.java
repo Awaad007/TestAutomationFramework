@@ -12,8 +12,8 @@ public class HomePage extends PageBase {
     //locators
     By registerLink = By.linkText("Register");
     By loginLink = By.linkText("Log in");
-
     By logoutLink = By.linkText("Log out");
+    By myAccountLink = By.linkText("My account");
 
     //methods
     public void openRegisterPage() {
@@ -21,6 +21,9 @@ public class HomePage extends PageBase {
     }
     public void openLoginPage(){
         clickOnButton(loginLink);
+    }
+    public void openMyAccountPage(){
+        clickOnButton(myAccountLink);
     }
     public boolean assertThatUserLoggedIn(){
         find(logoutLink).isDisplayed();
