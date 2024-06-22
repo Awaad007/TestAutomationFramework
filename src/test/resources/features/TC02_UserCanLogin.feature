@@ -1,5 +1,5 @@
+@Run
 Feature: Login
-  @Run
   Scenario Outline: user Login with valid and invalid cred:
     Given user at home screen and click on login button
     When user enters "<email>" address
