@@ -18,8 +18,8 @@ public class TC01_UserCanRegister{
         homeObject = new HomePage(Hooks.driver);
         homeObject.openRegisterPage();
     }
-    @When("user enter frist name")
-    public void user_enter_frist_name() {
+    @When("user enter first name")
+    public void user_enter_first_name() {
         registerObject= new RegisterPage(Hooks.driver);
         registerObject.userSetFirstName();
     }
@@ -36,12 +36,12 @@ public class TC01_UserCanRegister{
         registerObject.userSetPassword();
 
     }
-    @And("user confrim password")
-    public void user_confrim_password() {
+    @And("user confirm password")
+    public void user_confirm_password() {
         registerObject.userSetConfirmationPassword();
     }
-    @And("click on rigster button")
-    public void click_on_rigster_button() {
+    @And("click on register button")
+    public void click_on_register_button() {
         registerObject.userClickOnRegisterBtn();
     }
     @Then("user should be registered successfully")
