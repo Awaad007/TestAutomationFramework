@@ -12,8 +12,13 @@ public class ProductDetailsPage extends PageBase {
     //locator
     By productTitle = By.cssSelector("strong.current-item");
     By productImage = By.id("main-product-img-4");
+    By emailFriendBtn = By.xpath("//button[contains(@class,'email')]");
 
     //method
+    public void clickOnEmailFriendBtn(){
+        clickOnButton(emailFriendBtn);
+    }
+    //assert
     public String assertThatProductNameIsDisplayed(){
         return find(productTitle).getText();
     }

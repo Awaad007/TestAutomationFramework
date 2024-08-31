@@ -18,7 +18,7 @@ public class MyAccountPage extends PageBase {
     By notificationBar = By.cssSelector(".bar-notification.success");
     By closeBtn = By.cssSelector("span.close");
 
-    String changePasswordData = "ChangePassword.json";
+    String changePasswordData = "ChangePasswordData.json";
 
     //Methods
     public void clickOnChangePasswordPage(){
